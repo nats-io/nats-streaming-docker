@@ -1,0 +1,18 @@
+version: "2"
+services:
+  nats:
+    image: appcelerator/nats-streaming
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  sut:
+    image: appcelerator/sut
+    build:
+      context: ./sut
+      dockerfile: Dockerfile
+    depends_on:
+      - nats
