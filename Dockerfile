@@ -22,6 +22,8 @@ COPY server.cfg /etc/server.cfg.tpl
 
 VOLUME ["/data"]
 
+HEALTHCHECK --interval=5s --retries=3 --timeout=1s CMD curl -sI localhost:8222 | grep -q "HTTP/1.1 200 OK"
+
 # Run with default memory based store 
 ENTRYPOINT ["/run.sh"]
 CMD ["-m", "8222"]
