@@ -25,8 +25,12 @@ docker build -t nats-streaming-builder $TEMP
 # Create a dummy nats streaming builder container so we can run a cp against it.
 ID=$(docker create nats-streaming-builder)
 
-# Update the local binary.
-docker cp $ID:/go/bin/nats-streaming-server .
+# Update the local binaries.
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-amd64/nats-streaming-server amd64/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm7/nats-streaming-server arm32v7/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm64/nats-streaming-server arm64v8/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/windowsservercore/
 
 # Cleanup.
 rm -fr $TEMP
