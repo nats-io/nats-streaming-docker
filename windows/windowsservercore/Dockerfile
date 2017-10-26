@@ -14,5 +14,4 @@ COPY nats-streaming-server.exe nats-streaming-server.exe
 EXPOSE 4222 8222
 
 # Run with default memory based store 
-ENTRYPOINT ["nats-streaming-server"]
-CMD ["-m", "8222"]
+CMD ["nats-streaming-server", "-m", "8222"]
