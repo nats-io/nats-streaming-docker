@@ -27,6 +27,7 @@ ID=$(docker create nats-streaming-builder)
 
 # Update the local binaries.
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-amd64/nats-streaming-server amd64/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm6/nats-streaming-server arm32v6/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm7/nats-streaming-server arm32v7/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm64/nats-streaming-server arm64v8/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver/
