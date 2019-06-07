@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore
+FROM mcr.microsoft.com/windows/servercore:ltsc2016
 
 # The NAT Streaming Server will look for this environment variable.
 # When set, it prevents the use of the service API to detect
