@@ -30,8 +30,8 @@ docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-amd64/n
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm6/nats-streaming-server arm32v6/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm7/nats-streaming-server arm32v7/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/linux-arm64/nats-streaming-server arm64v8/
-docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver/
-docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver2019/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver-1803/
+docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/nanoserver-1809/
 docker cp $ID:/go/src/github.com/nats-io/nats-streaming-server/pkg/win-amd64/nats-streaming-server.exe windows/windowsservercore/
 
 # Cleanup.
