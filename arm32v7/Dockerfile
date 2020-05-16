@@ -1,4 +1,4 @@
-FROM scratch
+FROM busybox
 
 COPY nats-streaming-server /nats-streaming-server
 
