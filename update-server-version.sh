@@ -23,7 +23,7 @@ replace_tag() {
 	fi
 }
 
-if [[ "$(pwd)" != *"nats-docker" ]]; then
+if [[ "$(pwd)" != *"nats-streaming-docker" ]]; then
 	echo "$(basename "${0}") must be run from the repo top level"
 	exit 1
 fi
