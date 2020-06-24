@@ -1,6 +1,6 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
-ENV NATS_STREAMING_SERVER 0.17.0
+ENV NATS_STREAMING_SERVER 0.18.0
 
 RUN set -eux; \
 	apkArch="$(apk --print-arch)"; \
