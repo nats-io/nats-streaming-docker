@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -ex
 
-ver=(NATS_STREAMING_SERVER 0.21.0)
+ver=(NATS_STREAMING_SERVER 0.21.1)
 
 (
 	cd "${ver[1]}/alpine3.13"
-	docker build --tag nats-streaming:0.21.0-alpine3.13 .
+	docker build --tag nats-streaming:0.21.1-alpine3.13 .
 )
 
 (
 	cd "${ver[1]}/scratch"
-	docker build --tag nats-streaming:0.21.0-scratch .
+	docker build --tag nats-streaming:0.21.1-scratch .
 )
