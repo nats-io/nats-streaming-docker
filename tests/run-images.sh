@@ -2,8 +2,8 @@
 set -ex
 
 images=(
-	'nats-streaming:0.21.0-alpine3.13'
-	'nats-streaming:0.21.0-scratch'
+	'nats-streaming:0.21.1-alpine3.13'
+	'nats-streaming:0.21.1-scratch'
 )
 
 for img in "${images[@]}"; do
