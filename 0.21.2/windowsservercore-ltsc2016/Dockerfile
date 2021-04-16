@@ -4,9 +4,9 @@ FROM mcr.microsoft.com/windows/servercore:ltsc2016
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 ENV NATS_DOCKERIZED 1
-ENV NATS_STREAMING_SERVER 0.21.1
+ENV NATS_STREAMING_SERVER 0.21.2
 ENV NATS_STREAMING_SERVER_DOWNLOAD https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-windows-amd64.zip
-ENV GIT_DOWNLOAD_SHA256 798ec9b686a8dcb4de93074f416eab067a0896b52ccfc05b65a5e21d55e634e5
+ENV GIT_DOWNLOAD_SHA256 5d4367fea29116fcd70c364c8e808d6bc8e74214effbde83dd9548455bd06df2
 
 RUN Set-PSDebug -Trace 2
 
