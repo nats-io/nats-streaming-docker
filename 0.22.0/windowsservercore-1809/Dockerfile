@@ -1,12 +1,12 @@
-FROM mcr.microsoft.com/windows/servercore:ltsc2016
+FROM mcr.microsoft.com/windows/servercore:1809
 
 # Enable exit on error.
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 ENV NATS_DOCKERIZED 1
-ENV NATS_STREAMING_SERVER 0.21.2
+ENV NATS_STREAMING_SERVER 0.22.0
 ENV NATS_STREAMING_SERVER_DOWNLOAD https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-windows-amd64.zip
-ENV GIT_DOWNLOAD_SHA256 5d4367fea29116fcd70c364c8e808d6bc8e74214effbde83dd9548455bd06df2
+ENV GIT_DOWNLOAD_SHA256 436c16330efbd0767d9a69dcdf2d3badd4e2598fab23c4f4a192e9d9982c2c92
 
 RUN Set-PSDebug -Trace 2
 
