@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14
 
 ENV NATS_STREAMING_SERVER 0.22.0
 
