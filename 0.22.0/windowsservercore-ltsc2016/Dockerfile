@@ -6,7 +6,7 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 ENV NATS_DOCKERIZED 1
 ENV NATS_STREAMING_SERVER 0.22.0
 ENV NATS_STREAMING_SERVER_DOWNLOAD https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-windows-amd64.zip
-ENV GIT_DOWNLOAD_SHA256 436c16330efbd0767d9a69dcdf2d3badd4e2598fab23c4f4a192e9d9982c2c92
+ENV NATS_STREAMING_SERVER_SHASUM 436c16330efbd0767d9a69dcdf2d3badd4e2598fab23c4f4a192e9d9982c2c92
 
 RUN Set-PSDebug -Trace 2
 
@@ -14,8 +14,8 @@ RUN Write-Host ('downloading from {0} ...' -f $env:NATS_STREAMING_SERVER_DOWNLOA
 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \
 	Invoke-WebRequest -Uri $env:NATS_STREAMING_SERVER_DOWNLOAD -OutFile nats-streaming.zip; \
 	\
-	Write-Host ('verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); \
-	if ((Get-FileHash nats-streaming.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { \
+	Write-Host ('verifying sha256 ({0}) ...' -f $env:NATS_STREAMING_SERVER_SHASUM); \
+	if ((Get-FileHash nats-streaming.zip -Algorithm sha256).Hash -ne $env:NATS_STREAMING_SERVER_SHASUM) { \
 		Write-Host 'FAILED!'; \
 		exit 1; \
 	}; \
