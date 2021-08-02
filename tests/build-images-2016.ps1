@@ -3,7 +3,7 @@ Set-PSDebug -Trace 2
 # Exit on error.
 $ErrorActionPreference = "Stop"
 
-$ver = 'NATS_STREAMING_SERVER 0.22.0'.Split(' ')[1]
+$ver = 'NATS_STREAMING_SERVER 0.22.1'.Split(' ')[1]
 
 Write-Output '-- host info ---'
 Write-Output $PSVersionTable
