@@ -49,7 +49,7 @@ def update_nats_streaming_server_env(old_ver: str, new_ver: str):
 def update_nats_tag(old_ver: str, new_ver: str):
     files = nats_tag_list(old_ver)
 
-    r = re.compile(r"(nats:)[0-9]+\.[0-9]+\.[0-9]+")
+    r = re.compile(r"(nats-streaming:)[0-9]+\.[0-9]+\.[0-9]+")
 
     for f in files:
         with open(f, "r") as fd:
