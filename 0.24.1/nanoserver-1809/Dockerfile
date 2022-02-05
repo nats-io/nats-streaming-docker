@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/windows/nanoserver:1809
 # (https://github.com/nats-io/gnatsd/issues/543)
 ENV NATS_DOCKERIZED 1
 
-COPY --from=nats-streaming:0.24.0-windowsservercore-1809 C:\\nats-streaming-server.exe C:\\nats-streaming-server.exe
+COPY --from=nats-streaming:0.24.1-windowsservercore-1809 C:\\nats-streaming-server.exe C:\\nats-streaming-server.exe
 
 EXPOSE 4222 8222
 ENTRYPOINT ["C:\\nats-streaming-server.exe"]
