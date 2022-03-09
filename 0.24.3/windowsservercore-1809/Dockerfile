@@ -4,9 +4,9 @@ FROM mcr.microsoft.com/windows/servercore:1809
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 ENV NATS_DOCKERIZED 1
-ENV NATS_STREAMING_SERVER 0.24.2
+ENV NATS_STREAMING_SERVER 0.24.3
 ENV NATS_STREAMING_SERVER_DOWNLOAD https://github.com/nats-io/nats-streaming-server/releases/download/v${NATS_STREAMING_SERVER}/nats-streaming-server-v${NATS_STREAMING_SERVER}-windows-amd64.zip
-ENV NATS_STREAMING_SERVER_SHASUM 15a7692d56bc3b2d6fb84b89d631205a927a807d3c901e6929dfcb82445149d2
+ENV NATS_STREAMING_SERVER_SHASUM 7473bfa7efd734ca6984907bc9586260031cca926883b468b4752557ecefaff0
 
 RUN Set-PSDebug -Trace 2
 
